@@ -1,10 +1,12 @@
-import Image from 'next/image';
+'use client';
 import {
   Contact,
   Education,
   Hero,
   Projects,
+  Experience,
   Services,
+  Skills,
 } from '@/components';
 
 export default function Home() {
@@ -13,7 +15,9 @@ export default function Home() {
       <Hero />
       <Services />
       <Education />
+      <Experience />
       <Projects />
+      <Skills />
       <Contact />
     </div>
   );

@@ -50,7 +50,7 @@ export function Education() {
 
       <div className="h-[100px]" />
 
-      <div className="mx-auto max-w-2xl lg:max-w-4xl border">
+      <div className="mx-auto max-w-2xl lg:max-w-4xl">
         <Courses />
       </div>
     </section>
