@@ -1,5 +1,5 @@
-# DANIEL BELLO
+## DANIEL BELLO
 
-# PORTFOLIO V2
+## PORTFOLIO V2
 
-# https://danielbello.dev
+## https://danielbello.dev
