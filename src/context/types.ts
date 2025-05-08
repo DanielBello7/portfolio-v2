@@ -50,6 +50,7 @@ export type EmploymentHistory = {
   position_held: string;
   company_name: string;
   country: string;
+  points: string[];
 };
 
 export type Course = {
@@ -63,8 +64,8 @@ export type Course = {
 
 export type Project = {
   id: string;
-  img: string;
-  previews: string[];
+  img: string | any;
+  previews: (string | any)[];
   github: string;
   url: string | null;
   title: string;
@@ -100,7 +101,8 @@ export type Portfolio = {
   };
   role: string;
   professional_summary: string;
-  avatar: string;
+  avatar: string | any;
+  imgs: (string | any)[]
   nationality: string;
   phone_number: string;
   email: string;

@@ -1,5 +1,6 @@
 'use client';
 import type { Portfolio } from './types';
+import { daniel_bello } from '@/constants';
 import React from 'react';
 
 type PortfolioContext = { portfolio: Portfolio };
@@ -10,7 +11,7 @@ type Props = {
 
 const PortfolioContext = React.createContext({} as PortfolioContext);
 
-export function use_portfolio() {
+export function usePortfolio() {
   return React.useContext(PortfolioContext);
 }
 
@@ -18,7 +19,7 @@ export function PortfolioContextProvider(props: Props) {
   return (
     <PortfolioContext.Provider
       value={{
-        portfolio: {} as Portfolio,
+        portfolio: daniel_bello,
       }}
     >
       {props.children}

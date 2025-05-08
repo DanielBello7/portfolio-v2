@@ -1,59 +1,44 @@
-import * as motion from 'motion/react-client';
 import { box } from './box';
+import { ArrowRight } from 'lucide-react';
+import { Course as CourseItem } from '@/context/types';
+import * as motion from 'motion/react-client';
 
 type Props = {
-  post: any;
+  course: CourseItem;
 };
-export function Course({ post }: Props) {
+export function Course({ course }: Props) {
   return (
     <motion.article
-      whileHover={{
-        scale: 1.05,
-        boxShadow: '0px 10px 15px rgba(0, 0, 0, 0.08)',
-      }}
+      whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.8 }}
       style={box}
       transition={{ duration: 0.01 }}
-      key={post.id}
-      className="cursor-pointer flex max-w-xl flex-col items-start justify-between p-4 bg-muted rounded-sm"
+      key={course.id}
+      className="border cursor-pointer flex max-w-xl flex-col items-start justify-between p-4 bg-gray-50 rounded-sm"
     >
-      <div className="flex items-center gap-x-4 text-xs">
-        <time dateTime={post.datetime} className="text-gray-500">
-          {post.date}
+      <div className="flex items-center gap-x-4 text-xs justify-center w-full">
+        <time dateTime={course.end} className="text-gray-500">
+          {course.end}
         </time>
-        <a
-          href={post.category.href}
-          className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-        >
-          {post.category.title}
-        </a>
       </div>
-      <div className="group relative">
+      <div className="group relative text-center w-full">
         <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-          <a href={post.href}>
-            <span className="absolute inset-0" />
-            {post.title}
-          </a>
+          <p>
+            <span className="absolute inset-0 capitalize" />
+            {course.title}
+          </p>
         </h3>
-        <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">
-          {post.description}
+        <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600 capitalize">
+          {course.organization}
         </p>
       </div>
-      <div className="relative mt-8 flex items-center gap-x-4">
-        <img
-          alt=""
-          src={post.author.imageUrl}
-          className="size-10 rounded-full bg-gray-50"
-        />
-        <div className="text-sm/6">
-          <p className="font-semibold text-gray-900">
-            <a href={post.author.href}>
-              <span className="absolute inset-0" />
-              {post.author.name}
-            </a>
-          </p>
-          <p className="text-gray-600">{post.author.role}</p>
-        </div>
+      <div className="relative mt-8 flex items-center gap-x-4 w-full justify-center">
+        <p className="flex items-center space-x-2 text-indigo-600 hover:underline">
+          <a href={course.url} className="text-xs">
+            See Certificate
+          </a>
+          <ArrowRight className="size-3" />
+        </p>
       </div>
     </motion.article>
   );
