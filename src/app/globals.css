@@ -3,6 +3,62 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: 'Martian Mono';
+  src: url('../assets/fonts/MartianMono-ExtraBold.ttf');
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Martian Mono';
+  src: url('../assets/fonts/MartianMono-SemiBold.ttf');
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Martian Mono';
+  src: url('../assets/fonts/MartianMono-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Martian Mono';
+  src: url('../assets/fonts/MartianMono-Medium.ttf');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Martian Mono';
+  src: url('../assets/fonts/MartianMono-Regular.ttf');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Martian Mono';
+  src: url('../assets/fonts/MartianMono-Light.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Martian Mono';
+  src: url('../assets/fonts/MartianMono-ExtraLight.ttf');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Martian Mono';
+  src: url('../assets/fonts/MartianMono-Thin.ttf');
+  font-style: normal;
+  font-weight: 200;
+}
+
 .bg-grid {
   background-image: linear-gradient(
       rgba(215, 215, 215, 0.395) 0.05em,
@@ -13,7 +69,7 @@
       rgba(215, 215, 215, 0.395) 0.05em,
       transparent 0.1em
     );
-  background-size: 1.5em 1.5em;
+  background-size: 7.3em 7.3em;
 }
 
 body {
