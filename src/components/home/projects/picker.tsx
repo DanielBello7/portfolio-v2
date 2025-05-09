@@ -9,10 +9,13 @@ type Props = {
 
 export function Picker(props: Props) {
   const { portfolio } = usePortfolio();
-  const options = portfolio.projects.flatMap((item) => item.tags);
+  const options = [
+    'All',
+    ...new Set(portfolio.projects.flatMap((item) => item.tags)),
+  ];
 
   return (
-    <div className="w-full flex space-x-2 mt-3">
+    <div className="w-full flex space-x-2 space-y-2 mt-3 flex-wrap">
       {options.map((item, idx) => (
         <div
           onClick={() => props.set(item)}

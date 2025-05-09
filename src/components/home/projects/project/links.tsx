@@ -1,4 +1,5 @@
 'use client';
+import { Github, Globe } from 'lucide-react';
 
 type Props = {
   url: string | null;
@@ -9,15 +10,24 @@ export function ProjectLinks(props: Props) {
     <div className="w-full flex items-center space-x-3 mt-4 text-xs">
       {props.url && (
         <a
+          target="_blank"
+          rel="noreferrer"
           href={props.url}
-          className="text-indigo-600 hover:underline bg-indigo-50 rounded-full px-2 py-1"
+          className="text-indigo-600 hover:underline bg-indigo-50 rounded-full px-2 py-1 flex items-center gap-1"
         >
-          Preview
+          <Globe className="size-3" />
+          <span>Preview</span>
         </a>
       )}
       {props.github && (
-        <a href={props.github} className="text-indigo-600 hover:underline">
-          GitHub
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href={props.github}
+          className="text-indigo-600 hover:underline flex items-center gap-1"
+        >
+          <Github className="size-3" />
+          <span>GitHub</span>
         </a>
       )}
     </div>

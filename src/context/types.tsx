@@ -74,6 +74,8 @@ export type Project = {
   description: string;
   type: PROJECT_TYPE;
   tags: string[];
+  isCompleted: boolean;
+  role: string;
 };
 
 export type ProgrammingLanguages = {
