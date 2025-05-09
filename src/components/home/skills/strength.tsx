@@ -14,7 +14,7 @@ export function Strength(props: Props) {
     if (isInView) {
       setProgress(props.number ?? Math.floor(Math.random() * 100));
     }
-  }, [isInView]);
+  }, [isInView, props.number]);
 
   return (
     <div

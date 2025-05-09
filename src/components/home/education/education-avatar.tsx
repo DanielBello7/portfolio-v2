@@ -7,7 +7,7 @@ export function EducationAvatar() {
   return (
     <Avatar className="mx-auto size-20">
       <AvatarImage
-        src={portfolio.imgs[portfolio.imgs.length - 1].src}
+        src={(portfolio.imgs[portfolio.imgs.length - 1] as any).src}
         className="object-cover"
         alt="@shadcn"
       />

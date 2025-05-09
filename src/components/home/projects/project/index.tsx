@@ -7,6 +7,7 @@ import { ProjectHeader } from './header';
 import * as assets from '@/constants/asset';
 import { ProjectLinks } from './links';
 import { Tags } from './tags';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components';
 
 type Props = {
   project: Project;
@@ -25,11 +26,19 @@ export function Project({ project }: Props) {
       />
       <Tags tags={project.tags} />
       <div className="relative mt-8 flex items-center gap-x-4">
-        <img
+        {/* <img
           alt=""
           src={assets.user_img1.src}
           className="size-10 rounded-full bg-gray-50 object-cover"
-        />
+        /> */}
+        <Avatar className="mx-auto size-10">
+          <AvatarImage
+            src={assets.user_img1.src}
+            className="object-cover"
+            alt="@shadcn"
+          />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
         <div className="text-sm/6">
           <div className="font-semibold text-gray-900">
             <p>

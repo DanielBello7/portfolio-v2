@@ -14,7 +14,7 @@ export function Number(props: { num: number }) {
   useEffect(() => {
     const controls = animate(count, props.num, { duration: 5 });
     return () => controls.stop();
-  }, []);
+  }, [props.num, count]);
 
   return <motion.pre style={text}>{rounded}</motion.pre>;
 }
