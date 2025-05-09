@@ -1,4 +1,3 @@
-import { box } from './box';
 import { ArrowRight } from 'lucide-react';
 import { Course as CourseItem } from '@/context/types';
 import * as motion from 'motion/react-client';
@@ -11,7 +10,6 @@ export function Course({ course }: Props) {
     <motion.article
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.8 }}
-      style={box}
       transition={{ duration: 0.01 }}
       key={course.id}
       className="border cursor-pointer flex max-w-xl flex-col items-start justify-between p-4 bg-gray-50 rounded-sm"

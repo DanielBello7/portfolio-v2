@@ -1,7 +1,5 @@
 'use client';
-
 import { Code, Wrench } from 'lucide-react';
-import { Background } from '../hero/bg';
 import { Number } from './number';
 import { Strength } from './strength';
 
@@ -29,7 +27,6 @@ export function Skills() {
   ];
   return (
     <div className="bg-white py-1 sm:py-3">
-      <Background />
       <div className="mx-auto max-w-3xl px-6 lg:px-8 flex gap-20">
         <div className="w-1/2">
           <div className="flex items-center space-x-2">

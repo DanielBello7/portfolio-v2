@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 /** ENUMS */
 export enum PROFICIENCY {
   EXPERT = 'EXPERT',
@@ -64,8 +66,8 @@ export type Course = {
 
 export type Project = {
   id: string;
-  img: string | any;
-  previews: (string | any)[];
+  img: string | StaticImageData;
+  previews: (string | StaticImageData)[];
   github: string;
   url: string | null;
   title: string;
@@ -101,8 +103,8 @@ export type Portfolio = {
   };
   role: string;
   professional_summary: string;
-  avatar: string | any;
-  imgs: (string | any)[]
+  avatar: string | StaticImageData;
+  imgs: (string | StaticImageData)[];
   nationality: string;
   phone_number: string;
   email: string;

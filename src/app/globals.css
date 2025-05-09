@@ -17,8 +17,8 @@
 }
 
 body {
-  font-family: 'JetBrains Mono', 'Martian Mono Thin', Helvetica, sans-serif,
-    Arial;
+  font-family: 'Martian Mono', Helvetica, sans-serif, Arial,
+    'JetBrains Mono Thin';
   margin: 0;
   padding: 0;
   overscroll-behavior: none;

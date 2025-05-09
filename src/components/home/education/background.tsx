@@ -1,4 +1,5 @@
-export function Bg() {
+'use client';
+export function EducationBackground() {
   return (
     <>
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-indigo-100),white)] opacity-20" />
