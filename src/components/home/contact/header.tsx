@@ -8,6 +8,15 @@ export function ContactHeader() {
         Reach out to me. Let me know if you are interested in my services
         or collaboration.
       </p>
+      <div className="mt-8">
+        <a
+          className="text-xs text-indigo-600 hover:underline"
+          href="/Adegoke_Adeyinka_Daniel_Bello_Full_Stack_Developer.pdf"
+          download="Resume.pdf"
+        >
+          Download C.V
+        </a>
+      </div>
     </div>
   );
 }
