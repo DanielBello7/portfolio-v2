@@ -1,11 +1,12 @@
 'use client';
-
+import { motion } from 'motion/react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import { navigation } from './data';
 import { useState } from 'react';
 import { SideBar } from './sidebar';
 import { Logo } from '../logo';
 import { Socials } from './socials';
+import { container, item as a } from './animation';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,17 +32,24 @@ export function Header() {
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        <motion.div
+          className="hidden lg:flex lg:gap-x-12"
+          variants={container}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+        >
           {navigation.map((item) => (
-            <a
+            <motion.a
               key={item.name}
+              variants={a}
               href={item.href}
               className="text-sm/6 font-semibold text-gray-900 hover:underline"
             >
               {item.name}
-            </a>
+            </motion.a>
           ))}
-        </div>
+        </motion.div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Socials />
         </div>
