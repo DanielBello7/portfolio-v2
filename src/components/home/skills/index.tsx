@@ -5,7 +5,7 @@ import { Detailed } from './detailed';
 
 export function Skills() {
   return (
-    <div className="bg-white py-1 sm:py-3">
+    <div className="bg-white py-1 sm:py-3" id="skills">
       <SkillsHeader />
       <div className="mx-auto max-w-3xl px-6 lg:px-8 flex gap-20">
         <Detailed />

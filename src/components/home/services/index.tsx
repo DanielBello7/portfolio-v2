@@ -21,7 +21,7 @@ export function Services() {
   }));
 
   return (
-    <div className="bg-white py-1 sm:py-3">
+    <div className="bg-white py-1 sm:py-3" id="services">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <ServiceTitle />
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

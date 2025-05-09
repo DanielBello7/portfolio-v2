@@ -7,11 +7,12 @@ import {
   Experience,
   Services,
   Skills,
+  Footer,
 } from '@/components';
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen bg-grid">
+    <div className="w-full min-h-screen">
       <Hero />
       <Services />
       <Education />
@@ -19,6 +20,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Contact />
+      <Footer />
     </div>
   );
 }

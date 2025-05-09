@@ -1,4 +1,5 @@
 'use client';
+import classnames from 'classnames';
 import React from 'react';
 import axios from 'axios';
 import { toast } from 'sonner';
@@ -57,16 +58,24 @@ export function Form() {
       setLoading(false);
       toast('Message sent successfully', {
         position: 'top-center',
-        description:
-          "Your email has been sent. I'll get back to you as soon as possible",
+        description: (
+          <p className="text-green-600">
+            Your email has been sent. I'll get back to you as soon as
+            possible
+          </p>
+        ),
       });
       setformdata(initial);
     } catch (error) {
       toast('Error occured', {
         position: 'top-center',
-        description:
-          (error as unknown as Error).message ??
-          'Error trying to send message',
+        description: (
+          <p className="text-red-600">
+            {(error as unknown as Error).message ??
+              'Error trying to send message'}
+          </p>
+        ),
+        descriptionClassName: 'text-red-600',
       });
       setLoading(false);
     } finally {
@@ -186,7 +195,6 @@ export function Form() {
               required={true}
               disabled={isLoading}
               className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
-              defaultValue={''}
             />
           </div>
         </div>
@@ -195,9 +203,20 @@ export function Form() {
         <button
           disabled={isLoading}
           type="submit"
-          className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          className={classnames(
+            'w-full rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs flex items-center justify-center',
+            {
+              'bg-indigo-300 cursor-not-allowed': isLoading,
+              'bg-indigo-600 hover:bg-indigo-500 cursor-pointer':
+                !isLoading,
+            }
+          )}
         >
-          {isLoading ? <Loader /> : "Let's talk"}
+          {isLoading ? (
+            <Loader className="size-4 text-whit animate-spin" />
+          ) : (
+            "Let's talk"
+          )}
         </button>
       </div>
     </form>
