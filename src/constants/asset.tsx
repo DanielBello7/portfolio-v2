@@ -51,6 +51,15 @@ import tracer_3 from '@/assets/7-tracer/tracer-shot-3.png';
 import tracer_4 from '@/assets/7-tracer/tracer-shot-4.png';
 import tracer_5 from '@/assets/7-tracer/tracer-shot-5.png';
 
+/** bucket */
+import bucket_1 from '@/assets/10-bucket/bucket-1.png';
+
+/** portfolio v1 */
+import portfolio_v1_1 from '@/assets/9-portfolio-v1/portfolio-v1.png';
+
+/** hireus  */
+import hireus_1 from '@/assets/8-hireus/hireus-1.png';
+
 export {
   user_img1,
   user_img2,
@@ -89,4 +98,7 @@ export {
   tracer_3,
   tracer_4,
   tracer_5,
+  bucket_1,
+  portfolio_v1_1,
+  hireus_1,
 };
