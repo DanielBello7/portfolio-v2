@@ -13,7 +13,7 @@ type Props = {
 };
 export function Project({ project }: Props) {
   return (
-    <motion.article className="flex max-w-xl flex-col items-start justify-between">
+    <motion.article className="flex max-w-xl flex-col items-start justify-between bg-gray-50 p-5 rounded-sm">
       <ProjectHeader
         category={project.isCompleted ? 'Completed' : 'Ongoing'}
         date="10/10/2025"

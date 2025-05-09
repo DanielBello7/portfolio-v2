@@ -15,7 +15,7 @@ export function Picker(props: Props) {
   ];
 
   return (
-    <div className="w-full flex space-x-2 space-y-2 mt-3 flex-wrap">
+    <div className="w-full flex gap-2 mt-3 flex-wrap">
       {options.map((item, idx) => (
         <div
           onClick={() => props.set(item)}
