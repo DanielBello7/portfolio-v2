@@ -471,7 +471,7 @@ export const daniel_bello: Portfolio = {
       tags: ['Frontend', 'Vite', 'Javascript', 'Framer Motion'],
       title: 'Portfolio V1',
       type: PROJECT_TYPE.FRONTEND,
-      url: 'portfolio-steel-seven-96.vercel.app',
+      url: 'https://portfolio-steel-seven-96.vercel.app/',
       isCompleted: true,
       role: 'Frontend',
     },
