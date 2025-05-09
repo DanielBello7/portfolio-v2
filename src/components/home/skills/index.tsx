@@ -7,7 +7,7 @@ export function Skills() {
   return (
     <div className="bg-white py-1 sm:py-3" id="skills">
       <SkillsHeader />
-      <div className="mx-auto max-w-3xl px-6 lg:px-8 flex gap-20">
+      <div className="mx-auto max-w-3xl px-6 lg:px-8 flex flex-col md:flex-row gap-20">
         <Detailed />
         <Languages />
       </div>

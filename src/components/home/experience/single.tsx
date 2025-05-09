@@ -21,8 +21,8 @@ export function Single({ experience }: Props) {
   );
 
   return (
-    <div className="h-[250px] flex hover:scale-[104%] mb-3" ref={ref}>
-      <div className="w-[45%] pt-16">
+    <div className="lg:h-[250px] flex hover:scale-[104%] mb-3" ref={ref}>
+      <div className="w-[45%] pt-16 hidden lg:block">
         <h1 className="capitalize font-bold text-2xl">
           {experience.position_held}
         </h1>
@@ -31,7 +31,7 @@ export function Single({ experience }: Props) {
         </h1>
       </div>
 
-      <div className="w-[150px] pr-14 pt-5">
+      <div className="w-[150px] pr-14 pt-5 hidden lg:block">
         <div className="flex flex-col items-center justify-center h-full text-center">
           <p className="text-indigo-600 mb-3 font-bold">
             {experience.end}
@@ -45,7 +45,19 @@ export function Single({ experience }: Props) {
         </div>
       </div>
 
-      <div className="w-[45%] pt-16">
+      <div className="w-full lg:w-[45%] pt-16">
+        <div className="my-10 lg:hidden">
+          <h1 className="capitalize font-bold text-2xl">
+            {experience.position_held}
+          </h1>
+          <h1 className="text-gray-400 capitalize">
+            {experience.company_name}
+          </h1>
+          <p className="text-indigo-600 mb-3 font-bold">
+            {experience.end}
+          </p>
+        </div>
+
         {experience.points.map((a, id) => (
           <div className="flex items-start mb-4 space-x-3" key={id}>
             <Dot className="size-8" />

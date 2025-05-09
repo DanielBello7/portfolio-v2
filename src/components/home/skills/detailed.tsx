@@ -8,7 +8,7 @@ export function Detailed() {
   const { portfolio } = usePortfolio();
 
   return (
-    <div className="w-1/2">
+    <div className="w-full md:w-1/2">
       <div className="flex items-center space-x-2">
         <div className="p-2 rounded-md text-white bg-indigo-600">
           <Wrench className="size-6" />
