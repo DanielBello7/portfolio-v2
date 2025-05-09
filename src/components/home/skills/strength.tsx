@@ -1,16 +1,18 @@
 'use client';
-
-import * as React from 'react';
 import { motion, useInView } from 'framer-motion';
+import React from 'react';
 
-export function Strength() {
+type Props = {
+  number?: number;
+};
+export function Strength(props: Props) {
   const [progress, setProgress] = React.useState(0);
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
 
   React.useEffect(() => {
     if (isInView) {
-      setProgress(Math.floor(Math.random() * 100));
+      setProgress(props.number ?? Math.floor(Math.random() * 100));
     }
   }, [isInView]);
 

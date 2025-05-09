@@ -1,5 +1,4 @@
 'use client';
-
 import {
   animate,
   motion,
@@ -19,10 +18,6 @@ export function Number(props: { num: number }) {
 
   return <motion.pre style={text}>{rounded}</motion.pre>;
 }
-
-/**
- * ==============   Styles   ================
- */
 
 const text = {
   fontSize: 20,

@@ -21,12 +21,14 @@ export type Skill = {
   id: string;
   title: string;
   proficiency: PROFICIENCY;
+  percent: number;
 };
 
 export type Language = {
   id: string;
   title: string;
   proficiency: PROFICIENCY;
+  percent: number;
 };
 
 export type Link = {
@@ -82,6 +84,7 @@ export type ProgrammingLanguages = {
   id: string;
   title: string;
   proficiency: string;
+  percent: number;
 };
 
 export type Service = {

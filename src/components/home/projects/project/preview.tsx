@@ -6,7 +6,7 @@ type Props = {
 };
 export function ProjectPreview(props: Props) {
   return (
-    <div className="w-full h-[200px] border-3 rounded-lg mt-5 bg-muted relative">
+    <div className="w-full h-[200px] border-1 rounded-lg mt-5 bg-muted relative">
       <Image
         className="w-full h-full object-cover rounded-lg"
         src={props.url}
