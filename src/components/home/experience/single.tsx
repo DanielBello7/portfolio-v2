@@ -1,7 +1,7 @@
 'use client';
 import { EmploymentHistory } from '@/context/types';
 import { Dot } from 'lucide-react';
-import { easeIn, motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import * as React from 'react';
 
 type Props = {

@@ -1,7 +1,7 @@
 'use client';
 import type { Service } from '@/context/types';
 import { ComponentType } from 'react';
-import { delay, motion } from 'motion/react';
+import { motion } from 'motion/react';
 
 type Props = {
   service: Service & {

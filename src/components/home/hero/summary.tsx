@@ -1,6 +1,6 @@
 'use client';
 import { usePortfolio } from '@/context/portfolio.context';
-import { delay, motion } from 'motion/react';
+import { motion } from 'motion/react';
 import Link from 'next/link';
 
 export function HeroMiddle() {
