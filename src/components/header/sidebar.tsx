@@ -1,10 +1,10 @@
 'use client';
-
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { navigation } from './data';
 import { Socials } from './socials';
 import { Logo } from '../logo';
+import Link from 'next/link';
 
 type Props = {
   isOpen: boolean;
@@ -32,13 +32,13 @@ export function SideBar(props: Props) {
           <div className="-my-6 divide-y divide-gray-500/10">
             <div className="space-y-2 py-6">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
             <div className="py-6">

@@ -1,4 +1,5 @@
 'use client';
+
 export function SkillsHeader() {
   return (
     <div className="text-center my-20">

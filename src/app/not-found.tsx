@@ -1,3 +1,4 @@
+'use client';
 import { NotFound } from '@/components';
 
 export default function NotFound404() {

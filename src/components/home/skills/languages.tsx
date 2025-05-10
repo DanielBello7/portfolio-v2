@@ -9,7 +9,7 @@ export function Languages() {
   return (
     <div className="w-full md:w-1/2">
       <div className="flex items-start space-x-2">
-        <div className="p-2 rounded-md text-white bg-indigo-600">
+        <div className="p-2 rounded-md text-white bg-amber-900">
           <Code className="size-6" />
         </div>
         <p className="text-xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-2xl lg:text-balance">

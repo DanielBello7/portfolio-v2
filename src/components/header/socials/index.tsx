@@ -1,4 +1,5 @@
-import * as React from 'react';
+'use client';
+import React from 'react';
 import { socials_items } from './data';
 import { container, item } from './animation';
 import { motion } from 'framer-motion';
@@ -10,7 +11,6 @@ export function Socials() {
       variants={container}
       initial="hidden"
       animate="show"
-      exit="hidden"
     >
       {socials_items.map((social, idx) => (
         <motion.a
@@ -19,6 +19,13 @@ export function Socials() {
           target="_blank"
           key={idx}
           variants={item}
+          whileHover={{
+            scale: 1.1,
+            className: 'bg-amber-900',
+          }}
+          transition={{
+            duration: 0.1,
+          }}
         >
           {social.icon}
         </motion.a>

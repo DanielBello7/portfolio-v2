@@ -22,5 +22,5 @@ export function Number(props: { num: number }) {
 const text = {
   fontSize: 20,
   fontWeight: 'bold',
-  color: '#4f39f6',
+  color: '#7b3306',
 };

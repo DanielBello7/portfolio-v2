@@ -1,3 +1,4 @@
+'use client';
 import { usePortfolio } from '@/context/portfolio.context';
 import { Course } from './course';
 

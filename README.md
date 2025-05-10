@@ -1,5 +1,8 @@
-## DANIEL BELLO
+## BY
+DANIEL BELLO
 
-## PORTFOLIO V2
+## TITLE
+PORTFOLIO V2
 
-## https://danielbello.dev
+## URL
+https://danielbello.dev

@@ -22,7 +22,7 @@ export function Strength(props: Props) {
       className="w-full bg-gray-200 rounded h-2 overflow-hidden"
     >
       <motion.div
-        className="h-full bg-indigo-600 rounded"
+        className="h-full bg-amber-900 rounded"
         initial={{ width: 0 }}
         animate={{ width: `${progress}%` }}
         transition={{ duration: 1, ease: 'easeOut' }}

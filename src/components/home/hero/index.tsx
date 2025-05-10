@@ -11,13 +11,13 @@ export function Hero() {
     <div className="bg-white bg-grid">
       <Header />
       <div className="relative isolate px-6 lg:px-8">
-        <Background />
+        {/* <Background /> */}
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-20">
           <UserAvatar />
           <HeroHeader />
           <HeroMiddle />
         </div>
-        <Polygon />
+        {/* <Polygon /> */}
       </div>
       <div className="w-full h-[150px] bg-gradient-to-t from-white from-50%" />
     </div>

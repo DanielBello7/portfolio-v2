@@ -1,3 +1,4 @@
+'use client';
 export function ContactHeader() {
   return (
     <div className="mx-auto max-w-2xl text-center">
@@ -10,7 +11,7 @@ export function ContactHeader() {
       </p>
       <div className="mt-8">
         <a
-          className="text-xs text-indigo-600 hover:underline"
+          className="text-xs text-amber-900 hover:underline"
           href="/Adegoke_Adeyinka_Daniel_Bello_Full_Stack_Developer.pdf"
           download="Resume.pdf"
         >

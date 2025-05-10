@@ -1,94 +1,11 @@
 'use client';
 import classnames from 'classnames';
 import React from 'react';
-import axios from 'axios';
-import { toast } from 'sonner';
 import { Loader } from 'lucide-react';
-
-const initial = {
-  firstname: '',
-  lastnames: '',
-  email: '',
-  message: '',
-};
+import { useLogic } from './use-logic';
 
 export function Form() {
-  const [isLoading, setLoading] = React.useState(false);
-  const [abort, setAbort] = React.useState<AbortSignal>();
-  const [formdata, setformdata] = React.useState(initial);
-
-  const handle_submit = async (event: React.FormEvent) => {
-    event.preventDefault();
-    setLoading(true);
-
-    try {
-      const emailData = {
-        from: formdata.email,
-        name: `${formdata.firstname} ${formdata.lastnames}`,
-        message: formdata.message,
-      };
-
-      await axios.post(
-        'https://api.brevo.com/v3/smtp/email',
-        {
-          sender: {
-            name: 'inScript',
-            email: 'support@inscripconnect.space',
-          },
-          to: [
-            {
-              email: 'gokebello@gmail.com',
-              name: 'Goke Bello',
-            },
-          ],
-          subject: 'Email From Personal Website',
-          htmlContent: JSON.stringify(emailData),
-        },
-        {
-          headers: {
-            'api-key':
-              (process.env.NEXT_PUBLIC_EMAIL_API_KEY as string) ?? '',
-            accept: 'application/json',
-            'content-type': 'application/json',
-          },
-          timeout: 10000,
-          signal: abort,
-        }
-      );
-      setLoading(false);
-      toast('Message sent successfully', {
-        position: 'top-center',
-        description: (
-          <p className="text-green-600">
-            Your email has been sent. I'll get back to you as soon as
-            possible
-          </p>
-        ),
-      });
-      setformdata(initial);
-    } catch (error) {
-      toast('Error occured', {
-        position: 'top-center',
-        description: (
-          <p className="text-red-600">
-            {(error as unknown as Error).message ??
-              'Error trying to send message'}
-          </p>
-        ),
-        descriptionClassName: 'text-red-600',
-      });
-      setLoading(false);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  React.useEffect(() => {
-    const controller = new AbortController();
-    setAbort(controller.signal);
-    return () => controller.abort();
-  }, []);
-
+  const { handle_submit, formdata, setformdata, isLoading } = useLogic();
   return (
     <form
       onSubmit={handle_submit}
@@ -117,7 +34,7 @@ export function Form() {
               disabled={isLoading}
               type="text"
               autoComplete="given-name"
-              className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+              className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-amber-900"
             />
           </div>
         </div>
@@ -143,7 +60,7 @@ export function Form() {
               required={true}
               disabled={isLoading}
               autoComplete="family-name"
-              className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+              className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-amber-900"
             />
           </div>
         </div>
@@ -169,7 +86,7 @@ export function Form() {
               required={true}
               disabled={isLoading}
               autoComplete="email"
-              className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+              className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-amber-900"
             />
           </div>
         </div>
@@ -194,7 +111,7 @@ export function Form() {
               }
               required={true}
               disabled={isLoading}
-              className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+              className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-amber-900"
             />
           </div>
         </div>
@@ -206,9 +123,8 @@ export function Form() {
           className={classnames(
             'w-full rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs flex items-center justify-center',
             {
-              'bg-indigo-300 cursor-not-allowed': isLoading,
-              'bg-indigo-600 hover:bg-indigo-500 cursor-pointer':
-                !isLoading,
+              'bg-amber-900 cursor-not-allowed': isLoading,
+              'bg-amber-900 hover:bg-amber-800 cursor-pointer': !isLoading,
             }
           )}
         >

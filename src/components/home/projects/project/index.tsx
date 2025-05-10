@@ -13,8 +13,18 @@ type Props = {
   project: Project;
 };
 export function Project({ project }: Props) {
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: { opacity: 1 },
+  };
+
   return (
-    <motion.article className="flex max-w-xl flex-col items-start justify-between bg-gray-50 p-5 rounded-sm">
+    <motion.article
+      className="flex max-w-xl flex-col items-start justify-between p-5 rounded-sm"
+      variants={itemVariants}
+    >
       <ProjectHeader
         category={project.isCompleted ? 'Completed' : 'Ongoing'}
         date="10/10/2025"
@@ -26,11 +36,6 @@ export function Project({ project }: Props) {
       />
       <Tags tags={project.tags} />
       <div className="relative mt-8 flex items-center gap-x-4">
-        {/* <img
-          alt=""
-          src={assets.user_img1.src}
-          className="size-10 rounded-full bg-gray-50 object-cover"
-        /> */}
         <Avatar className="mx-auto size-10">
           <AvatarImage
             src={assets.user_img1.src}

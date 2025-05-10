@@ -1,8 +1,8 @@
 'use client';
 import { EmploymentHistory } from '@/context/types';
 import { Dot } from 'lucide-react';
-import { motion, useScroll, useTransform } from 'motion/react';
-import React from 'react';
+import { easeIn, motion, useScroll, useTransform } from 'motion/react';
+import * as React from 'react';
 
 type Props = {
   experience: EmploymentHistory;
@@ -17,25 +17,42 @@ export function Single({ experience }: Props) {
   const lineColor = useTransform(
     scrollYProgress,
     [0, 1],
-    ['#e5e7eb', '#4f39f6']
+    ['#f3dfd2', '#7b3306']
   );
 
   return (
-    <div className="lg:h-[250px] flex hover:scale-[104%] mb-3" ref={ref}>
+    <motion.div
+      className="lg:h-[250px] flex hover:scale-[104%] mb-3"
+      ref={ref}
+      initial={{ opacity: 0.0, y: '30%' }}
+      viewport={{ once: true }}
+      whileInView={{
+        opacity: 1.0,
+        y: '0%',
+        transition: {
+          opacity: {
+            duration: 1.5,
+            ease: 'linear',
+          },
+          y: {
+            duration: 0.5,
+            ease: 'easeIn',
+          },
+        },
+      }}
+    >
       <div className="w-[45%] pt-16 hidden lg:block">
         <h1 className="capitalize font-bold text-2xl">
           {experience.position_held}
         </h1>
-        <h1 className="text-gray-400 capitalize">
+        <h1 className="text-gray-400 capitalize ">
           {experience.company_name}
         </h1>
       </div>
 
       <div className="w-[150px] pr-14 pt-5 hidden lg:block">
         <div className="flex flex-col items-center justify-center h-full text-center">
-          <p className="text-indigo-600 mb-3 font-bold">
-            {experience.end}
-          </p>
+          <p className="text-amber-900 mb-3 font-bold">{experience.end}</p>
           <motion.div
             className="w-1 h-full"
             style={{
@@ -67,6 +84,6 @@ export function Single({ experience }: Props) {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

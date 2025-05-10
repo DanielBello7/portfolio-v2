@@ -1,3 +1,4 @@
+'use client';
 type Props = {
   date: string;
   category: string;

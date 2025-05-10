@@ -12,7 +12,7 @@ export function ProjectTitle(props: Props) {
         Projects
       </h2>
       <p className="mt-2 text-md/8 text-gray-500">
-        Check some of my previous work and projects
+        Check some of my personal projects
       </p>
       <Picker selected={props.selected} set={props.set} />
     </div>

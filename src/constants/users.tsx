@@ -20,7 +20,7 @@ export const daniel_bello: Portfolio = {
   role: 'computer engineer',
   professional_summary:
     'A computer engineer with over 9 years of distrubuted experience in full-stack web development, mobile development and embedded systems.',
-  avatar: assets.user_img1,
+  avatar: assets.user_img4,
   nationality: 'nigerian',
   phone_number: '+1 (463) 626-0490',
   email: 'gokebello@gmail.com',

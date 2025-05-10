@@ -1,3 +1,4 @@
+'use client';
 import { ArrowRight } from 'lucide-react';
 import { Course as CourseItem } from '@/context/types';
 import * as motion from 'motion/react-client';
@@ -31,9 +32,9 @@ export function Course({ course }: Props) {
         </p>
       </div>
       <div className="relative mt-8 flex items-center gap-x-4 w-full justify-center">
-        <p className="flex items-center space-x-2 text-indigo-600 hover:underline">
-          <a href={course.url} className="text-xs">
-            See Certificate
+        <p className="flex items-center space-x-2 text-amber-900 hover:underline">
+          <a href={course.url} className="text-xs" target="_blank">
+            See More
           </a>
           <ArrowRight className="size-3" />
         </p>

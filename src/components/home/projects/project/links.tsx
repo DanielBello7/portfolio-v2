@@ -13,7 +13,7 @@ export function ProjectLinks(props: Props) {
           target="_blank"
           rel="noreferrer"
           href={props.url}
-          className="text-indigo-600 hover:underline bg-indigo-50 rounded-full px-2 py-1 flex items-center gap-1"
+          className="text-amber-900 hover:underline bg-indigo-50 rounded-full px-2 py-1 flex items-center gap-1"
         >
           <Globe className="size-3" />
           <span>Preview</span>
@@ -24,7 +24,7 @@ export function ProjectLinks(props: Props) {
           target="_blank"
           rel="noreferrer"
           href={props.github}
-          className="text-indigo-600 hover:underline flex items-center gap-1"
+          className="text-amber-900 hover:underline flex items-center gap-1"
         >
           <Github className="size-3" />
           <span>GitHub</span>
