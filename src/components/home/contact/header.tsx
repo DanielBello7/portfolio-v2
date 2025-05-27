@@ -11,8 +11,8 @@ export function ContactHeader() {
       </p>
       <div className="mt-8">
         <a
-          className="text-xs text-amber-900 hover:underline"
-          href="/Adegoke_Adeyinka_Daniel_Bello_Full_Stack_Developer.pdf"
+          className="text-lg font-bold underline hover:text-red-400 text-amber-900 hover:underline"
+          href="/Adegoke Adeyinka Daniel-Bello-Full Stack Developer(readable).pdf"
           download="Resume.pdf"
         >
           Download C.V
