@@ -12,7 +12,7 @@ export function ContactHeader() {
       <div className="mt-8">
         <a
           className="text-lg font-bold underline hover:text-red-400 text-amber-900 hover:underline"
-          href="/Adegoke Adeyinka Daniel-Bello-Full Stack Developer(readable).pdf"
+          href="/Daniel-Bello-Full Stack Developer (readable).pdf"
           download="Resume.pdf"
         >
           Download C.V

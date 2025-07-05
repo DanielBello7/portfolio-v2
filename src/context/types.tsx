@@ -101,6 +101,7 @@ export type Portfolio = {
   started_programming_at: string; // year started programming
   started_professions_at: string; // year started working professionally
   name: {
+    prefered: string;
     complete: string;
     last: string;
     first: string;

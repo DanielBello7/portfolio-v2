@@ -13,7 +13,7 @@ export function HeroMiddle() {
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
       >
-        {portfolio.name.complete}
+        {portfolio.name.prefered}
       </motion.h1>
       <motion.p
         className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-lg/8"

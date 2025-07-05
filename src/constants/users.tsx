@@ -12,6 +12,7 @@ export const daniel_bello: Portfolio = {
     assets.user_img4,
   ],
   name: {
+    prefered: 'daniel bello',
     complete: 'adegoke adeyinka daniel bello',
     first: 'adegoke',
     last: 'bello',
