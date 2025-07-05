@@ -24,7 +24,7 @@ export const daniel_bello: Portfolio = {
   avatar: assets.user_img4,
   nationality: 'nigerian',
   phone_number: '+1 (463) 626-0490',
-  email: 'gokebello@gmail.com',
+  email: 'danielbello.pro@gmail.com',
   address: {
     country: 'united-states',
     state: 'indiana',
